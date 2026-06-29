@@ -1,0 +1,8 @@
+node_modules/
+dist/
+upload.php
+uploads/
+.env
+.env.local
+.DS_Store
+*.log
