@@ -266,4 +266,194 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  .nav-tab {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+  }
+}
+
+/* ── Header & Navigation ── */
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #1a1a2e;
+  border-bottom: 1px solid #2a2a4a;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-tab {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.nav-tab:hover {
+  color: #ccc;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-tab.active {
+  color: #fff;
+  background: #6c63ff;
+}
+
+/* ── File List (shared) ── */
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #12122a;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.file-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: #1a1a2e;
+  flex-shrink: 0;
+}
+
+.file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  color: #e0e0e0;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.file-meta {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.file-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.icon-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ccc;
+}
+
+.icon-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.icon-btn.danger:hover:not(:disabled) {
+  background: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+}
+
+/* ── Option Buttons (orientation, margins) ── */
+
+.option-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.option-btn {
+  padding: 8px 16px;
+  border: 2px solid #2a2a4a;
+  background: #12122a;
+  color: #888;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.option-btn:hover {
+  border-color: #3a3a5c;
+  color: #ccc;
+}
+
+.option-btn.active {
+  border-color: #6c63ff;
+  color: #fff;
+  background: rgba(108, 99, 255, 0.1);
+}
+
+/* ── Empty State ── */
+
+.empty-state {
+  text-align: center;
+  padding: 24px;
+  color: #666;
+  font-size: 0.9rem;
 }
