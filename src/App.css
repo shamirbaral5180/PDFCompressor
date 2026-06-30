@@ -457,3 +457,60 @@ h1 {
   color: #666;
   font-size: 0.9rem;
 }
+
+/* ── Split Panels (PDF+Image Merge) ── */
+
+.split-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.panel {
+  background: #12122a;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel h3 {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.panel-upload {
+  padding: 24px 16px !important;
+  font-size: 0.85rem !important;
+}
+
+.panel-upload svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.panel-list {
+  margin-top: 12px;
+}
+
+.panel-list .file-row {
+  padding: 6px 10px;
+}
+
+.panel-empty {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .split-panels {
+    grid-template-columns: 1fr;
+  }
+}

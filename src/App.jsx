@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Compressor from './Compressor'
 import PdfMerger from './PdfMerger'
 import ImageToPdf from './ImageToPdf'
+import PdfImageMerge from './PdfImageMerge'
 import './App.css'
 
 export default function App() {
@@ -25,6 +26,12 @@ export default function App() {
             PDF Merger
           </button>
           <button
+            className={'nav-tab' + (service === 'imageMerge' ? ' active' : '')}
+            onClick={() => setService('imageMerge')}
+          >
+            PDF+Image Merge
+          </button>
+          <button
             className={'nav-tab' + (service === 'imageToPdf' ? ' active' : '')}
             onClick={() => setService('imageToPdf')}
           >
@@ -35,6 +42,7 @@ export default function App() {
       <main className="container">
         {service === 'compressor' && <Compressor />}
         {service === 'merger' && <PdfMerger />}
+        {service === 'imageMerge' && <PdfImageMerge />}
         {service === 'imageToPdf' && <ImageToPdf />}
       </main>
     </div>
